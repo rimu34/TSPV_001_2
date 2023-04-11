@@ -9,20 +9,26 @@
     using System.Windows;
     using Prism.DryIoc;
     using Prism.Ioc;
+    using TSPV.Core;
+    using TSPV.ViewModels;
+    using TSPV.Views;
 
     /// <summary>
     /// Interaction logic for App.xaml
     /// </summary>
     public partial class App : PrismApplication
     {
-        protected override Window CreateShell()
-        {
-            throw new NotImplementedException();
-        }
+        private const string _mainWindow = "Shell";
+
+        protected override Window CreateShell() => Container.Resolve<MainWindow>();
 
         protected override void RegisterTypes(IContainerRegistry containerRegistry)
         {
-            throw new NotImplementedException();
+            /// Register Services
+            containerRegistry.RegisterCoreServices();
+
+            /// Register Views & ViewModels
+            containerRegistry.RegisterForNavigation<MainWindow, MainWindowVM>(_mainWindow);
         }
     }
 }

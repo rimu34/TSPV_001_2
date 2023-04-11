@@ -24,7 +24,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Views\" />
+    <ProjectReference Include="..\TSPV.Core\TSPV.Core.csproj" />
   </ItemGroup>
 
 </Project>
