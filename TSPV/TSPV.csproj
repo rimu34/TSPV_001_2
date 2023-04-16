@@ -26,10 +26,12 @@
 
   <ItemGroup>
     <ProjectReference Include="..\TSPV.Core\TSPV.Core.csproj" />
+    <ProjectReference Include="..\TSPV.Navigation\TSPV.Navigation.csproj" />
   </ItemGroup>
 
   <ItemGroup>
     <Folder Include="Assets\Language\Dialogs\" />
+    <Folder Include="Views\NavigationMenu\" />
   </ItemGroup>
 
 </Project>

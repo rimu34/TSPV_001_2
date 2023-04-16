@@ -27,7 +27,9 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Common\Styles\" />
+    <Folder Include="Common\Fonts\" />
+    <Folder Include="Common\Images\" />
+    <Folder Include="Common\Styles\Controllers\" />
   </ItemGroup>
 
 </Project>

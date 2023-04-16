@@ -1,15 +1,11 @@
 ﻿namespace TSPV
 {
-    using System;
-    using System.Collections.Generic;
-    using System.Configuration;
-    using System.Data;
-    using System.Linq;
-    using System.Threading.Tasks;
     using System.Windows;
     using Prism.DryIoc;
     using Prism.Ioc;
+    using Prism.Modularity;
     using TSPV.Core;
+    using TSPV.Navigation;
     using TSPV.ViewModels;
     using TSPV.Views;
 
@@ -29,6 +25,15 @@
 
             /// Register Views & ViewModels
             containerRegistry.RegisterForNavigation<MainWindow, MainWindowVM>(_mainWindow);
+        }
+
+        protected override IModuleCatalog CreateModuleCatalog()
+        {
+            var catalog = base.CreateModuleCatalog();
+
+            catalog.AddModule<NavigationModule>();
+
+            return catalog;
         }
     }
 }
